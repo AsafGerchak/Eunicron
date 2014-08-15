@@ -27,12 +27,3 @@
 
 
 <body <?php body_class(); ?>>
-
-<div class="header">
-  <div class="innerWrapper">
-	
-    
-
-  </div> <!-- /.innerWrapper -->
-</div><!--/.header-->
-

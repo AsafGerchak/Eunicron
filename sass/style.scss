@@ -36,6 +36,7 @@ img.alignright    { padding-left: 5px; }
 
 body {
   color:#333;
+  padding: 3%;
 }
 
 a {
@@ -44,15 +45,19 @@ a {
 }
 
 .innerWrapper {
-  max-width:1000px;
+  max-width:1100px;
   margin:0 auto;
 }
 
+// Ironically, I'm floating this "left" div to the right! THERE IS NO LAW
 .left {
-  float:left;
+  float:right;
   width:68%;
   margin-right: 2%;
-
+		
+		h3 {
+			font-size: 0;
+		}
 }
 
 .full {
@@ -106,6 +111,7 @@ pre {
 .sidebar {
   width:30%;
   float:left;
+  position: fixed;
 }
   .sidebar ul {
     margin:0;
@@ -135,15 +141,15 @@ pre {
     padding:0;
   }
     ul.menu li {
-      display:inline;
+      // display:inline;
       margin-right: 10px;
     }
 
       ul.menu li a {
         color:#333;
         padding:10px;
-        background:#333;
-        color:white;
+        // background:#333;
+        // color:white;
       }
 
 
