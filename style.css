@@ -9,32 +9,34 @@ Author URI: http://CoderOfNote.com
 /* =============================================================================
                    Normalize, border box and clearfix 
    ========================================================================== */
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block; }
 
-audio, canvas, video {
-  display: inline-block; }
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline; }
 
 audio:not([controls]) {
   display: none;
   height: 0; }
 
-[hidden] {
+[hidden], template {
   display: none; }
 
-html {
-  font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
-
-a:focus {
-  outline: thin dotted; }
+a {
+  background: 0 0; }
 
 a:active, a:hover {
   outline: 0; }
-
-h1 {
-  font-size: 2em; }
 
 abbr[title] {
   border-bottom: 1px dotted; }
@@ -45,20 +47,12 @@ b, strong {
 dfn {
   font-style: italic; }
 
+h1 {
+  font-size: 2em; }
+
 mark {
   background: #ff0;
   color: #000; }
-
-code, kbd, pre, samp {
-  font-family: monospace, serif;
-  font-size: 1em; }
-
-pre {
-  white-space: pre-wrap;
-  word-wrap: break-word; }
-
-q {
-  quotes: \201C \201D \2018 \2019; }
 
 small {
   font-size: 80%; }
@@ -75,38 +69,65 @@ sup {
 sub {
   bottom: -.25em; }
 
+a, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0; }
+
 img {
   border: 0; }
 
 svg:not(:root) {
   overflow: hidden; }
 
-fieldset {
-  border: 1px solid silver;
-  margin: 0 2px;
-  padding: .35em .625em .75em; }
+figure {
+  margin: 1em 40px; }
 
-button, input, select, textarea {
-  font-family: inherit;
-  font-size: 100%;
+hr {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code, kbd, pre, samp {
+  font-family: monospace,monospace;
+  font-size: 1em; }
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
   margin: 0; }
 
-button, input {
-  line-height: normal; }
+button {
+  overflow: visible; }
 
-button, html input[type=button],
-input[type=reset], input[type=submit] {
+button, select {
+  text-transform: none; }
+
+button, html input[type=button], input[type=reset], input[type=submit] {
   -webkit-appearance: button;
   cursor: pointer; }
 
-button[disabled], input[disabled] {
+button[disabled], html input[disabled] {
   cursor: default; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
 
 input[type=checkbox], input[type=radio] {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0; }
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  height: auto; }
 
 input[type=search] {
   -webkit-appearance: textfield;
@@ -117,19 +138,26 @@ input[type=search] {
 input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
 textarea {
-  overflow: auto;
-  vertical-align: top; }
+  overflow: auto; }
+
+optgroup {
+  font-weight: 700; }
 
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-body, figure {
-  margin: 0; }
-
-legend, button::-moz-focus-inner, input::-moz-focus-inner {
-  border: 0;
+td, th {
   padding: 0; }
 
 * {
@@ -179,30 +207,40 @@ img.alignright {
   float: left;
   clear: both; }
 
+/*
+====================
+Sass Variables
+====================
+*/
+/* =============================================================================
+                   Typography
+   ========================================================================== */
+h1, h2 {
+  font-family: 'Rosario', sans-serif; }
+
 /* =============================================================================
                    Default Styling 
    ========================================================================== */
 body {
   color: #333;
-  padding: 3%; }
+  padding: 3%;
+  background-color: #d0cfb8; }
 
 a {
-  color: #D12028;
+  color: #000;
   text-decoration: none; }
 
-.innerWrapper {
+.section {
   max-width: 1100px;
   margin: 0 auto; }
 
 .left {
   float: right;
-  width: 68%;
-  height: 1000%;
-  margin-right: 2%;
-  background: url("../images/art01b.png") no-repeat;
-  background-size: cover; }
+  width: 75%; }
   .left h3 {
     font-size: 0; }
+  .left img {
+    height: auto; }
 
 .full {
   width: 100%; }
@@ -247,9 +285,13 @@ pre {
                    Sidebar 
    ========================================================================== */
 .sidebar {
-  width: 30%;
+  width: 25%;
   float: left;
   position: fixed; }
+  .sidebar .site-logo {
+    width: 60%; }
+    .sidebar .site-logo img {
+      border-radius: 50%; }
 
 .sidebar ul {
   margin: 0;
@@ -275,8 +317,7 @@ ul.menu li {
   margin-right: 10px; }
 
 ul.menu li a {
-  color: #333;
-  padding: 10px; }
+  color: #333; }
 
 /* =============================================================================
                    Comment Styling 
