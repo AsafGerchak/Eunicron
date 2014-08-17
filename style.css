@@ -206,7 +206,6 @@ img {
    ========================================================================== */
 /* === SASS VARIABLES === */
 body {
-  color: #333;
   padding: 3% 3% 3% 3%;
   background: #393939 url("images/wild_oliva/wild_oliva.png") repeat;
   width: 100%;
@@ -223,7 +222,8 @@ body {
    ========================================================================== */
 h1, h2 {
   font-family: 'Rosario', sans-serif;
-  color: #dbb8a5; }
+  color: #dbb8a5;
+  font-weight: 400; }
 
 h1 {
   margin-top: 5%;
@@ -236,12 +236,19 @@ a {
   color: #b39b8e;
   text-decoration: none; }
 
-li {
+p, li {
   font-family: 'Overlock', cursive;
+  font-weight: 400; }
+
+p {
+  font-size: 20px;
+  line-height: 1.4;
+  color: #93aeb1; }
+
+li {
   font-size: 23px;
   text-transform: uppercase;
-  line-height: 1;
-  padding: 2% 0; }
+  line-height: 1; }
 
 /* =============================================================================
                    Sidebar and Navigation
@@ -251,21 +258,40 @@ li {
   float: left;
   position: fixed;
   text-align: right;
-  padding-top: 5%; }
+  padding-top: 3%;
+  padding-right: 5%;
+  border-right: 5px solid #b39b8e;
+  /* === NAV === */
+  /* === SOCIAL ICONS === */ }
   .sidebar .site-logo {
     width: 100%;
     text-align: right; }
     .sidebar .site-logo img {
-      width: 35%;
+      width: 40%;
       border-radius: 50%;
       border: 5px solid #b39b8e; }
-
-.sidebar ul {
-  margin: 10% 0 0 0;
-  padding: 0; }
-
-.sidebar ul li {
-  list-style: none; }
+  .sidebar .menu {
+    margin: 8% 0 8% 0;
+    padding: 0;
+    list-style: none; }
+    .sidebar .menu li a {
+      padding: 5% 0 5% 5%; }
+      .sidebar .menu li a:hover {
+        border-left: 2px solid #93aeb1; }
+  .sidebar .social {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 10%;
+    list-style: none; }
+    .sidebar .social li {
+      display: inline;
+      width: 20%; }
+    .sidebar .social .socialIcon svg {
+      height: 24px;
+      margin: 1.5%;
+      fill: #b39b8e; }
+    .sidebar .social .email svg {
+      height: 19px; }
 
 /* =============================================================================
                    Content Section
@@ -279,19 +305,13 @@ li {
     float: right;
     height: auto;
     width: auto; }
+  .left p {
+    margin: 3% 0 4% 0; }
 
 .full {
   width: 100%; }
 
 /*blockquotes*/
-blockquote {
-  background: #F7F7F7;
-  margin: 0;
-  padding: 20px; }
-
-blockquote p {
-  margin-top: 0; }
-
 /* =============================================================================
                    Footer 
    ========================================================================== */

@@ -48,16 +48,21 @@ $body: #393939;
 $accentLight: #dbb8a5;
 $accentMed: #b39b8e;
 $accentDark: #7a625c;
+// $font: #338899;
+// $font: #66aebd;
+// $font: #a8b7b9;
+$font: #93aeb1;
 
 
 body {
-  color:#333;
+  // color:#333;
   padding: 3% 3% 3% 3%;
   // background: url('images/tweed/tweed.png') repeat;
   // background: url('images/hoffman/hoffman.png') repeat;
   // background: url('images/squared_metal/squared_metal.png') repeat;
   // background: url('images/black_lozenge/black_lozenge.png') repeat;
   background: $body url('images/wild_oliva/wild_oliva.png') repeat;
+  // background-attachment: fixed;
   width: 100%;
   height: 100%;
 }
@@ -77,8 +82,10 @@ body {
 h1, h2 {
 	font-family: 'Rosario', sans-serif;
 	color: $accentLight;
+	font-weight: 400;
 	// color: $accentDark;
 	// text-shadow: 0 0 0.20px #fff;
+	// transition: all 1s linear;
 }
 
 h1 {
@@ -98,12 +105,22 @@ a {
   text-decoration: none;
 }
 
-li {
+p, li {
 	font-family: 'Overlock', cursive;
+	font-weight: 400;
+}
+
+p {
+	font-size: 20px;
+	line-height: 1.4;
+	color: $font;
+}
+
+li {
 	font-size: 23px;
 	text-transform: uppercase;
 	line-height: 1;
-	padding: 2% 0;
+	// padding: 2% 0;
 }
 
 /* =============================================================================
@@ -115,7 +132,9 @@ li {
   float:left;
   position: fixed;
   text-align: right;
-  padding-top: 5%;
+  padding-top: 3%;
+  padding-right: 5%;
+  border-right: 5px solid $accentMed;
 
   .site-logo {
   	// float: right;
@@ -125,23 +144,71 @@ li {
 
   	img{
   		// float: right;
-  		width: 35%;
+  		width: 40%;
   		border-radius: 50%;
   		// border: 5px solid $accentLight;
   		// border: 5px solid $accentDark;
   		border: 5px solid $accentMed;
-  	}
+  		// transition: all 0.4s linear;
+
+  		// &:hover {
+  		// 	transform: scale(1.015);
+  		// }
+  	} // End img
   } // End .site-logo
+
+  // &>a:hover h1,
+  // &>a:hover h2 {
+		// transform: scale(1.015);
+  // }
+	
+		/* === NAV === */
+	  .menu {
+			margin: 8% 0 8% 0;
+			padding:0;
+			list-style: none;
+			// background-color: red;
+
+			li a {
+		  	padding: 5% 0 5% 5%;
+
+		  	&:hover {
+		  		border-left: 2px solid $font;
+		  	}
+			}
+		} // End .menu
+
+	/* === SOCIAL ICONS === */
+	.social {
+		// display: inline;
+		padding: 0;
+		margin-top: 0;
+		margin-bottom: 10%;
+		list-style: none;
+
+		li {
+			// list-style: none;
+			display: inline;
+			width: 20%;
+			// height: 24px;
+		}
+
+		.socialIcon svg {
+			// display: inline-block;
+			height: 24px;
+			margin: 1.5%;
+			fill: $accentMed;
+		}
+
+		.email svg {
+			height: 19px;
+		}
+
+	} // End .social
 } // End .sidebar
 
-.sidebar ul {
-  margin: 10% 0 0 0;
-  padding:0;
-}
 
-.sidebar ul li {
-  list-style: none;
-}
+
 
 
 /* =============================================================================
@@ -171,21 +238,26 @@ li {
 			// width: 70%;
 			// margin-right: 10%;
 		}
-}
+
+		p {
+			// margin-bottom: 5%;
+			margin: 3% 0 4% 0;
+		}
+} // End .left
 
 .full {
   width:100%;
 }
 
 /*blockquotes*/
-blockquote {
-  background: #F7F7F7;
-  margin:0;
-  padding:20px;
-}
-  blockquote p {
-    margin-top: 0;
-  }
+// blockquote {
+//   background: #F7F7F7;
+//   margin:0;
+//   padding:20px;
+// }
+//   blockquote p {
+//     margin-top: 0;
+//   }
 
 // /*tables*/
 // table td {
