@@ -50,6 +50,7 @@ Sass Variables
 
 $body: #393939;
 $accentLight: #b39b8e;
+// $accentLight: #cfbdb3;
 $accentDark: #7a625c;
 
 
@@ -61,6 +62,7 @@ h1, h2 {
 	font-family: 'Rosario', sans-serif;
 	color: $accentLight;
 	// color: $accentDark;
+	text-shadow: 0 0 0.20px #ddd;
 }
 
 h1 {

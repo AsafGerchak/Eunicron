@@ -211,7 +211,8 @@ Sass Variables
    ========================================================================== */
 h1, h2 {
   font-family: 'Rosario', sans-serif;
-  color: #b39b8e; }
+  color: #b39b8e;
+  text-shadow: 0 0 0.20px #ddd; }
 
 h1 {
   margin-top: 5%;
