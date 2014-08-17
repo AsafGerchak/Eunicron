@@ -25,8 +25,8 @@ img {
 .aligncenter    { text-align: center; margin: 0 auto; }
 .alignleft      { float: left; }
 .alignright     { float: right; }
-img.alignleft     { padding-right: 5px;}
-img.alignright    { padding-left: 5px; }
+// img.alignleft     { padding-right: 5px;}
+// img.alignright    { padding-left: 5px; }
 .clear        { width:100%; float:left; clear:both;}
 
 
@@ -44,7 +44,13 @@ Sass Variables
 // $body: #e8e3e3;
 // $body: #e1c8c6;
 // $body: #b6b4d2;
-$body: #d0cfb8;
+// $body: #d0cfb8;
+// $body: #2a7893;
+// $body: #93abb3;
+
+$body: #393939;
+$accentLight: #b39b8e;
+$accentDark: #7a625c;
 
 
 /* =============================================================================
@@ -53,8 +59,33 @@ $body: #d0cfb8;
 
 h1, h2 {
 	font-family: 'Rosario', sans-serif;
+	color: $accentLight;
+	// color: $accentDark;
 }
 
+h1 {
+	margin-top: 5%;
+	font-size: 47px;
+}
+
+h2 {
+	// margin: 1% 0;
+	font-size: 28px;
+}
+
+a {
+  color: $accentLight;
+  // color: $accentDark;
+  text-decoration: none;
+}
+
+li {
+	font-family: 'Overlock', cursive;
+	font-size: 23px;
+	text-transform: uppercase;
+	line-height: 1;
+	padding: 2% 0;
+}
 
 /* =============================================================================
                    Default Styling 
@@ -62,24 +93,28 @@ h1, h2 {
 
 body {
   color:#333;
-  padding: 3%;
-  background-color: $body;
-}
-
-a {
-  color:#000;
-  text-decoration: none;
+  padding: 1% 3% 3% 3%;
+  // background: url('images/tweed/tweed.png') repeat;
+  // background: url('images/hoffman/hoffman.png') repeat;
+  // background: url('images/squared_metal/squared_metal.png') repeat;
+  // background: url('images/black_lozenge/black_lozenge.png') repeat;
+  background: $body url('images/wild_oliva/wild_oliva.png') repeat;
+  width: 100%;
+  height: 100%;
 }
 
 .section {
-  max-width:1100px;
+	width: 100%;
+	height: 100%;
+  max-width:1500px;
   margin:0 auto;
 }
 
 // Ironically, I'm floating this "left" div to the right! THERE IS NO LAW
 .left {
-  float:right;
+  float: right;
   width:75%;
+  // margin-left: 45%;
   // height: auto;
   // margin-right: 2%;
 		
@@ -88,7 +123,11 @@ a {
 		}
 
 		img {
-			height: auto;
+			float: right;
+			height: 50%;
+			// width: auto;
+			// height: auto;
+			// width: 100%;
 		}
 }
 
@@ -124,11 +163,6 @@ dd {
   margin-left: 10px;
 }
 
-/*lists*/
-ul li,ol li {
-  padding:3px;
-}
-
 /*PRE*/
 
 pre {
@@ -141,22 +175,31 @@ pre {
                    Sidebar 
    ========================================================================== */
 .sidebar {
-  width:25%;
+  width:21%;
   float:left;
   position: fixed;
+  text-align: right;
+  padding-top: 5%;
 
   .site-logo {
+  	float: right;
   	width: 60%;
   	// border-radius: 50%;
 
   	img{
   		border-radius: 50%;
+  		border: 5px solid $accentLight;
+  		// border: 5px solid $accentDark;
   	}
   } // End .site-logo
+
+  .title {
+		// margin-right: 15%;
+  } // End .title
 } // End .sidebar
 
 .sidebar ul {
-  margin:0;
+  margin: 10% 0 0 0;
   padding:0;
 }
 
@@ -179,21 +222,6 @@ pre {
 /* =============================================================================
                    Navigation 
    ========================================================================== */
-  ul.menu {
-    margin:0;
-    padding:0;
-  }
-    ul.menu li {
-      // display:inline;
-      margin-right: 10px;
-    }
-
-      ul.menu li a {
-        color:#333;
-        // padding:10px;
-        // background:#333;
-        // color:white;
-      }
 
 
 /* =============================================================================
