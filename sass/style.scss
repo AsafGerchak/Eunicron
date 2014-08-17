@@ -30,72 +30,29 @@ img {
 .clear        { width:100%; float:left; clear:both;}
 
 
-/*
-====================
-Sass Variables
-====================
-*/
+/* =============================================================================
+                   General Styles
+   ========================================================================== */
 
 // TITLE:
 // font-family: 'Rosario', sans-serif;
 // BODY:
 // font-family: 'Overlock', cursive;
 
-// $body: #e8e3e3;
-// $body: #e1c8c6;
-// $body: #b6b4d2;
-// $body: #d0cfb8;
-// $body: #2a7893;
-// $body: #93abb3;
+/* === SASS VARIABLES === */
 
 $body: #393939;
-$accentLight: #b39b8e;
+// $accentLight: #b39b8e;
 // $accentLight: #cfbdb3;
+// $accentLight: #dbc5b9;
+$accentLight: #dbb8a5;
+$accentMed: #b39b8e;
 $accentDark: #7a625c;
 
 
-/* =============================================================================
-                   Typography
-   ========================================================================== */
-
-h1, h2 {
-	font-family: 'Rosario', sans-serif;
-	color: $accentLight;
-	// color: $accentDark;
-	text-shadow: 0 0 0.20px #ddd;
-}
-
-h1 {
-	margin-top: 5%;
-	font-size: 47px;
-}
-
-h2 {
-	// margin: 1% 0;
-	font-size: 28px;
-}
-
-a {
-  color: $accentLight;
-  // color: $accentDark;
-  text-decoration: none;
-}
-
-li {
-	font-family: 'Overlock', cursive;
-	font-size: 23px;
-	text-transform: uppercase;
-	line-height: 1;
-	padding: 2% 0;
-}
-
-/* =============================================================================
-                   Default Styling 
-   ========================================================================== */
-
 body {
   color:#333;
-  padding: 1% 3% 3% 3%;
+  padding: 3% 3% 3% 3%;
   // background: url('images/tweed/tweed.png') repeat;
   // background: url('images/hoffman/hoffman.png') repeat;
   // background: url('images/squared_metal/squared_metal.png') repeat;
@@ -112,24 +69,107 @@ body {
   margin:0 auto;
 }
 
+
+/* =============================================================================
+                   Typography
+   ========================================================================== */
+
+h1, h2 {
+	font-family: 'Rosario', sans-serif;
+	color: $accentLight;
+	// color: $accentDark;
+	// text-shadow: 0 0 0.20px #fff;
+}
+
+h1 {
+	margin-top: 5%;
+	font-size: 47px;
+}
+
+h2 {
+	// margin: 1% 0;
+	font-size: 28px;
+}
+
+a {
+  // color: $accentLight;
+  // color: $accentDark;
+  color: $accentMed;
+  text-decoration: none;
+}
+
+li {
+	font-family: 'Overlock', cursive;
+	font-size: 23px;
+	text-transform: uppercase;
+	line-height: 1;
+	padding: 2% 0;
+}
+
+/* =============================================================================
+                   Sidebar and Navigation
+   ========================================================================== */
+
+.sidebar {
+  width:30%;
+  float:left;
+  position: fixed;
+  text-align: right;
+  padding-top: 5%;
+
+  .site-logo {
+  	// float: right;
+  	width: 100%;
+  	text-align: right;
+  	// border-radius: 50%;
+
+  	img{
+  		// float: right;
+  		width: 35%;
+  		border-radius: 50%;
+  		// border: 5px solid $accentLight;
+  		// border: 5px solid $accentDark;
+  		border: 5px solid $accentMed;
+  	}
+  } // End .site-logo
+} // End .sidebar
+
+.sidebar ul {
+  margin: 10% 0 0 0;
+  padding:0;
+}
+
+.sidebar ul li {
+  list-style: none;
+}
+
+
+/* =============================================================================
+                   Content Section
+   ========================================================================== */
+
 // Ironically, I'm floating this "left" div to the right! THERE IS NO LAW
 .left {
   float: right;
-  width:75%;
+  width: 66%;
+  height: 100%;
+  padding: 0 7%;
+  // height: auto;
   // margin-left: 45%;
   // height: auto;
   // margin-right: 2%;
 		
 		h3 {
-			font-size: 0;
+			// font-size: 0;
 		}
 
 		img {
 			float: right;
-			height: 50%;
-			// width: auto;
+			height: auto;
+			width: auto;
 			// height: auto;
-			// width: 100%;
+			// width: 70%;
+			// margin-right: 10%;
 		}
 }
 
@@ -147,68 +187,32 @@ blockquote {
     margin-top: 0;
   }
 
-/*tables*/
-table td {
-  padding:10px;
-}
-table tr td:first {
-  padding-right: 0;
-}
+// /*tables*/
+// table td {
+//   padding:10px;
+// }
+// table tr td:first {
+//   padding-right: 0;
+// }
 
-/*def lists*/
-dt {
-  font-weight: 600;
-  padding-bottom: 5px;
-}
-dd {
-  padding:10px;
-  margin-left: 10px;
-}
+// /*def lists*/
+// dt {
+//   font-weight: 600;
+//   padding-bottom: 5px;
+// }
+// dd {
+//   padding:10px;
+//   margin-left: 10px;
+// }
 
-/*PRE*/
+// /*PRE*/
 
-pre {
-  background: #F7F7F7;
-  padding:10px;
-  border-radius: 4px;
-  border:1px solid #ccc;
-}
-/* =============================================================================
-                   Sidebar 
-   ========================================================================== */
-.sidebar {
-  width:21%;
-  float:left;
-  position: fixed;
-  text-align: right;
-  padding-top: 5%;
-
-  .site-logo {
-  	float: right;
-  	width: 60%;
-  	// border-radius: 50%;
-
-  	img{
-  		border-radius: 50%;
-  		border: 5px solid $accentLight;
-  		// border: 5px solid $accentDark;
-  	}
-  } // End .site-logo
-
-  .title {
-		// margin-right: 15%;
-  } // End .title
-} // End .sidebar
-
-.sidebar ul {
-  margin: 10% 0 0 0;
-  padding:0;
-}
-
-.sidebar ul li {
-  list-style: none;
-}
-
+// pre {
+//   background: #F7F7F7;
+//   padding:10px;
+//   border-radius: 4px;
+//   border:1px solid #ccc;
+// }
 
 
 
@@ -219,11 +223,6 @@ pre {
 .footer {
   clear:both;
 }
-
-
-/* =============================================================================
-                   Navigation 
-   ========================================================================== */
 
 
 /* =============================================================================
