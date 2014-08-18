@@ -52,6 +52,7 @@ $accentDark: #7a625c;
 // $font: #66aebd;
 // $font: #a8b7b9;
 $font: #93aeb1;
+$fontLight: #a6cdd2;
 
 
 body {
@@ -79,7 +80,7 @@ body {
                    Typography
    ========================================================================== */
 
-h1, h2 {
+h1, h2, h3 {
 	font-family: 'Rosario', sans-serif;
 	color: $accentLight;
 	font-weight: 400;
@@ -91,11 +92,18 @@ h1, h2 {
 h1 {
 	margin-top: 5%;
 	font-size: 47px;
+	letter-spacing: 2px;
 }
 
 h2 {
-	// margin: 1% 0;
 	font-size: 28px;
+	letter-spacing: 2px;
+}
+
+h3 {
+	font-size: 22px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 a {
@@ -120,6 +128,7 @@ li {
 	font-size: 23px;
 	text-transform: uppercase;
 	line-height: 1;
+	letter-spacing: 0.5px;
 	// padding: 2% 0;
 }
 
@@ -134,49 +143,68 @@ li {
   text-align: right;
   padding-top: 3%;
   padding-right: 5%;
-  border-right: 5px solid $accentMed;
+  border-right: 5px solid $font;
 
-  .site-logo {
-  	// float: right;
-  	width: 100%;
-  	text-align: right;
-  	// border-radius: 50%;
+  a {
 
-  	img{
-  		// float: right;
-  		width: 40%;
-  		border-radius: 50%;
-  		// border: 5px solid $accentLight;
-  		// border: 5px solid $accentDark;
-  		border: 5px solid $accentMed;
-  		// transition: all 0.4s linear;
+	  .site-logo {
+	  	width: 100%;
+	  	text-align: right;
 
-  		// &:hover {
-  		// 	transform: scale(1.015);
-  		// }
-  	} // End img
-  } // End .site-logo
+	  	img{
+	  		width: 40%;
+	  		border-radius: 50%;
+	  		// border: 5px solid $accentMed;
+	  		border: 5px solid $font;
+	  		// transition: margin 0.4s, border 0.2s 0.1s;
 
-  // &>a:hover h1,
-  // &>a:hover h2 {
-		// transform: scale(1.015);
-  // }
+	  	} // End img
+	  } // End .site-logo
+
+	  h1, h2 {
+	  	transition: color 0.3s, padding 0.4s, border 0.2s 0.1s;
+	  }
+
+	  &:hover {
+
+	  	img {
+	  		// margin-right: 5%;
+	  		// border: 5px solid $font;
+	  	}
+
+	  	h1, h2 {
+	  		color: $fontLight;
+	  	}
+
+	  	h1, h2 {
+	  		padding-right: 5%;
+	  		border-right: 2px solid $fontLight;
+	  	}
+	  } // End a:hover
+	} // End .sidebar a
 	
-		/* === NAV === */
-	  .menu {
-			margin: 8% 0 8% 0;
-			padding:0;
-			list-style: none;
-			// background-color: red;
 
-			li a {
-		  	padding: 5% 0 5% 5%;
+	/* === NAV === */
+  .menu {
+		margin: 8% 0 8% 0;
+		padding:0;
+		list-style: none;
+		// background-color: red;
 
-		  	&:hover {
-		  		border-left: 2px solid $font;
-		  	}
-			}
-		} // End .menu
+		li a {
+			line-height: 1.5;
+	  	padding: 1% 0 1% 5%;
+	  	// margin: 1% 0;
+	  	transition: color 0.3s, padding 0.4s, border 0.2s 0.1s;
+
+	  	&:hover {
+	  		color: $font;
+	  		padding-right: 5%;
+	  		border-right: 2px solid $font;
+	  	}
+		}
+	} // End .menu
+
 
 	/* === SOCIAL ICONS === */
 	.social {
@@ -193,12 +221,30 @@ li {
 			// height: 24px;
 		}
 
+		.socialIcon a {
+			transition: all 0.2s;
+
+			&:hover {
+				border-bottom: 2px solid $font;
+
+				svg {
+					fill: $font;
+				}
+			}
+		}
+
 		.socialIcon svg {
 			// display: inline-block;
 			height: 24px;
 			margin: 1.5%;
 			fill: $accentMed;
-		}
+			transition: all 0.3s;
+
+			&:hover {
+				// fill: $font;
+				// border-bottom: 2px solid $font;
+			}
+		} // End /.socialIcon svg
 
 		.email svg {
 			height: 19px;
@@ -221,15 +267,8 @@ li {
   width: 66%;
   height: 100%;
   padding: 0 7%;
-  // height: auto;
-  // margin-left: 45%;
-  // height: auto;
-  // margin-right: 2%;
-		
-		h3 {
-			// font-size: 0;
-		}
 
+	/* === HOME PAGE IMAGE === */
 		img {
 			float: right;
 			height: auto;
@@ -238,6 +277,24 @@ li {
 			// width: 70%;
 			// margin-right: 10%;
 		}
+
+	/* === INDIVIDUAL POSTS === */
+		.post {
+			width: 100%;
+			height: 100%;
+			padding-top: 3%;
+
+			.entry-content {
+				width: 100%;
+				height: 100%;
+
+				& p:nth-child(2) {
+					font-style: italic;
+					text-align: center;
+					
+				}
+			}
+		} //End .post
 
 		p {
 			// margin-bottom: 5%;
