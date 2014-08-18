@@ -53,6 +53,7 @@ $accentDark: #7a625c;
 // $font: #a8b7b9;
 $font: #93aeb1;
 $fontLight: #a6cdd2;
+$fontDark: #a6b2b3;
 
 
 body {
@@ -288,10 +289,22 @@ li {
 				width: 100%;
 				height: 100%;
 
+				img {
+					margin-bottom: 3%;
+				}
+
+			/* == CAPTION == */
 				& p:nth-child(2) {
 					font-style: italic;
 					text-align: center;
-					
+					color: $fontDark;
+					margin-bottom: 6%;
+				}
+
+			/* == PAINTING TITLE == */
+				& p:nth-child(3) {
+					font-weight: 700;
+					color: $fontLight;
 				}
 			}
 		} //End .post
