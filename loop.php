@@ -14,10 +14,11 @@
 
 <?php /* if there are posts, Start the Loop. */ ?>
 	
-	<h3>Portfolio</h3>
+	<h4>Portfolio</h4>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
+	<div class="gallery">
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 			<section class="content-thumbs clearfix">
@@ -26,6 +27,7 @@
 			</section><!-- .entry-content -->
 				
 		</article><!-- #post-## -->
+	</div> <!-- /.gallery -->
 
 <?php endwhile; // End the loop. Whew. ?>
 

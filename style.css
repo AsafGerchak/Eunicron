@@ -220,7 +220,7 @@ body {
 /* =============================================================================
                    Typography
    ========================================================================== */
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: 'Rosario', sans-serif;
   color: #dbb8a5;
   font-weight: 400; }
@@ -238,6 +238,11 @@ h3 {
   font-size: 22px;
   text-transform: uppercase;
   letter-spacing: 1px; }
+
+h4 {
+  font-size: 26px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px; }
 
 a {
   color: #b39b8e;
@@ -332,7 +337,8 @@ li {
   height: 100%;
   padding: 0 7%;
   /* === HOME PAGE IMAGE === */
-  /* === INDIVIDUAL POSTS === */ }
+  /* === INDIVIDUAL POSTS === */
+  /* === PORTFOLIO === */ }
   .left img {
     float: right;
     height: auto;
@@ -347,8 +353,8 @@ li {
     .left .post .entry-content {
       width: 100%;
       height: 100%;
-      /* == CAPTION == */
-      /* == PAINTING TITLE == */ }
+      /* CAPTION */
+      /* PAINTING TITLE */ }
       .left .post .entry-content img {
         margin-bottom: 3%; }
       .left .post .entry-content p:nth-child(2) {
@@ -373,6 +379,22 @@ li {
       float: left; }
     .left .navigation .nav-next {
       float: right; }
+  .left h4 {
+    margin-bottom: 5%; }
+  .left .gallery {
+    width: 30%;
+    float: left;
+    margin: 0 3.33% 2% 0; }
+    .left .gallery .content-thumbs {
+      width: 100%; }
+      .left .gallery .content-thumbs img {
+        width: 100%;
+        height: auto;
+        border: 5px solid #dbb8a5;
+        -webkit-transition: border 0.3s;
+                transition: border 0.3s; }
+        .left .gallery .content-thumbs img:hover {
+          border: 5px solid #a6cdd2; }
 
 .full {
   width: 100%; }

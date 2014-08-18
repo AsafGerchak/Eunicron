@@ -81,7 +81,7 @@ body {
                    Typography
    ========================================================================== */
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
 	font-family: 'Rosario', sans-serif;
 	color: $accentLight;
 	font-weight: 400;
@@ -105,6 +105,12 @@ h3 {
 	font-size: 22px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+}
+
+h4 {
+	font-size: 26px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
 }
 
 a {
@@ -301,7 +307,7 @@ li {
 					margin-bottom: 3%;
 				}
 
-			/* == CAPTION == */
+			/* CAPTION */
 				& p:nth-child(2) {
 					font-style: italic;
 					text-align: center;
@@ -309,7 +315,7 @@ li {
 					margin-bottom: 6%;
 				}
 
-			/* == PAINTING TITLE == */
+			/* PAINTING TITLE */
 				& p:nth-child(3) {
 					font-weight: 700;
 					color: $fontLight;
@@ -325,7 +331,7 @@ li {
 					font-style: italic;
 					line-height: 1.2;
 				}
-			}
+			} // End .entry-meta
 		} //End .post
 
 		.navigation {
@@ -340,6 +346,32 @@ li {
 				float: right;
 			}
 		} // end .navigation
+
+	/* === PORTFOLIO === */
+	h4 {
+		margin-bottom: 5%;
+	}
+
+	.gallery {
+		width: 30%;
+		float: left;
+		margin: 0 3.33% 2% 0;
+
+		.content-thumbs {
+			width: 100%;
+
+			img {
+				width: 100%;
+				height: auto;
+				border: 5px solid $accentLight;
+				transition: border 0.3s;
+
+				&:hover {
+					border: 5px solid $fontLight;
+				}
+			}
+		}
+	}
 
 } // End .left
 
