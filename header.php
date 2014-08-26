@@ -42,9 +42,11 @@
 
       <div class="headerText">
         
-        <a href="<?php echo home_url( '/' ); ?>" class="logo" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-          <h1><?php bloginfo( 'name' ); ?></h1>
-        </a>
+        <div class="title">
+          <a href="<?php echo home_url( '/' ); ?>" class="logo" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+            <h1><?php bloginfo( 'name' ); ?></h1>
+          </a>
+        </div> <!-- /.title -->
 
         <div class="subHead clearfix">
           

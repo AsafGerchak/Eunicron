@@ -1,7 +1,7 @@
 @media (max-width: 1000px) {
   #wpadminbar { border-left:10px solid red !important; }
   body{
-    padding: 0 3%;
+    /*padding: 0 3%;*/
   }
   
   .sidebar {
@@ -9,12 +9,12 @@
   }
 
   .section {
-    padding: 3%;
+    /*padding: 3%;*/
   }
 
   .left {
     /*width: 67%;*/
-    padding-right: 3%;
+    /*padding-right: 3%;*/
   }
 
 }
