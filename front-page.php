@@ -1,19 +1,9 @@
 <?php get_header();  ?>
 
 <div class="section clearfix">
-  <div class="left">
+  <div class="main">
 
-		<?php // Start the loop ?>
-    <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
-      <!-- <h2><?php the_title(); ?></h2> -->
-      <div class="piece">
-      	<?php the_content(); ?>
-      </div> <!-- /.piece -->
-
-    <?php endwhile; // end the loop?>
-
-	<!-- Custom loop! -->
+<!-- ==== Custom loop! ==== -->
 
     <?php $portfolioQuery = new wp_Query(
     		
@@ -27,10 +17,26 @@
 		<?php if ( $portfolioQuery->have_posts() ) : ?>
 
 			<?php while ( $portfolioQuery->have_posts() ) : $portfolioQuery->the_post(); ?>
+
+				<!-- THIS IS INSIDE THE LOOP -->
+
+				<div class="portfolioEntry">
+
+					<div class="megaThumbContainer">
+						<?php $image = get_field('photo'); ?>
+						<img src="<?php echo $image['sizes']['special'] ?>" class="megaThumb">
+						<!-- <pre><?php print_r($image); ?></pre> -->
+					</div> <!-- /.megaThumb -->
+					
+				</div> <!-- /.portfolioEntry -->
+				
 				<?php the_title(); ?>
 				<h2>boop</h2>
 				<?php the_field('materials'); ?>
 				<h1>beep</h1>
+
+				<!-- END OF INSIDE THE LOOP -->
+
 			<?php endwhile; ?>
 
 			<?php

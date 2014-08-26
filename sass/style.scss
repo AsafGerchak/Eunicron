@@ -17,9 +17,9 @@ Author URI: http://CoderOfNote.com
 
 .clearfix:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; } .clearfix {display: inline-block; } html[xmlns] .clearfix {display: block; } * html .clearfix {height: 1%; } 
 
-img {
-  max-width:100%;
-}
+// img {
+//   max-width:100%;
+// }
 
 /* Global Classes / Wordpress Specific */
 .aligncenter    { text-align: center; margin: 0 auto; }
@@ -134,7 +134,7 @@ li {
 		width: 80%;
 		max-width: 1300px;
 		margin: 0 10%;
-		padding: 3% 0;
+		padding: 1.5% 0;
 
 		.headerImage,
 		.headerText {
@@ -238,119 +238,145 @@ li {
 } // End .sidebar
 
 
-
-
-
 /* =============================================================================
                    Content Section
    ========================================================================== */
 
-// Ironically, I'm floating this "left" div to the right! THERE IS NO LAW
-.left {
-  // float: right;
-  width: 100%;
-  // height: 100%;
-  // padding: 0 7%;
+.main {
+	width: 100%;
+}
 
-	/* === HOME PAGE IMAGE === */
-		img {
-			// float: right;
+.portfolioEntry {
+	width: 100%;
+	height: 300px;
+	background:red;
+
+	.megaThumbContainer {
+		width: 50%;
+		height: 100%;
+		overflow: hidden;
+
+		.megaThumb {
+			width: 100%;
 			height: auto;
-			width: auto;
+			// position: relative;
+			// top: -50%;
 		}
+	} // End .megaThumb
+} // End .portfolioEntry
 
-		p {
-			margin: 3% 0 4% 0;
-		}
 
-	/* === INDIVIDUAL POSTS === */
-		.post {
-			width: 100%;
-			height: 100%;
 
-			.entry-title {
-				margin-bottom: 6%;
-			}
+/* =============================================================================
+                   Content Section (OLD, BEING REBUILT)
+   ========================================================================== */
 
-			.entry-content {
-				width: 100%;
-				height: 100%;
+// Ironically, I'm floating this "left" div to the right! THERE IS NO LAW
+// .left {
+//   // float: right;
+//   width: 100%;
+//   // height: 100%;
+//   // padding: 0 7%;
 
-				img {
-					margin-bottom: 3%;
-				}
+// 	/* === HOME PAGE IMAGE === */
+// 		img {
+// 			// float: right;
+// 			height: auto;
+// 			width: auto;
+// 		}
 
-			/* CAPTION */
-				& p:nth-child(2) {
-					font-style: italic;
-					text-align: center;
-					color: $fontDark;
-					margin-bottom: 6%;
-				}
+// 		p {
+// 			margin: 3% 0 4% 0;
+// 		}
 
-			/* PAINTING TITLE */
-				& p:nth-child(3) {
-					font-weight: 700;
-					color: $fontLight;
-				}
-			} // End .entry-content
+// 	/* === INDIVIDUAL POSTS === */
+// 		.post {
+// 			width: 100%;
+// 			height: 100%;
 
-			.entry-meta {
-				text-align: right;
+// 			.entry-title {
+// 				margin-bottom: 6%;
+// 			}
 
-				p {
-					margin: 0;
-					color: $fontDark;
-					font-style: italic;
-					line-height: 1.2;
-				}
-			} // End .entry-meta
-		} //End .post
+// 			.entry-content {
+// 				width: 100%;
+// 				height: 100%;
 
-		.navigation {
-			width: 100%;
-			margin-top: 8%;
+// 				img {
+// 					margin-bottom: 3%;
+// 				}
 
-			.nav-previous {
-				float: left;
-			}
+// 			/* CAPTION */
+// 				& p:nth-child(2) {
+// 					font-style: italic;
+// 					text-align: center;
+// 					color: $fontDark;
+// 					margin-bottom: 6%;
+// 				}
 
-			.nav-next {
-				float: right;
-			}
-		} // end .navigation
+// 			/* PAINTING TITLE */
+// 				& p:nth-child(3) {
+// 					font-weight: 700;
+// 					color: $fontLight;
+// 				}
+// 			} // End .entry-content
+
+// 			.entry-meta {
+// 				text-align: right;
+
+// 				p {
+// 					margin: 0;
+// 					color: $fontDark;
+// 					font-style: italic;
+// 					line-height: 1.2;
+// 				}
+// 			} // End .entry-meta
+// 		} //End .post
+
+// 		.navigation {
+// 			width: 100%;
+// 			margin-top: 8%;
+
+// 			.nav-previous {
+// 				float: left;
+// 			}
+
+// 			.nav-next {
+// 				float: right;
+// 			}
+// 		} // end .navigation
 
 	/* === PORTFOLIO === */
-	h4 {
-		margin-bottom: 5%;
-	}
+// 	h4 {
+// 		margin-bottom: 5%;
+// 	}
 
-	.gallery {
-		width: 30%;
-		float: left;
-		margin: 0 3.33% 2% 0;
+// 	.gallery {
+// 		width: 30%;
+// 		float: left;
+// 		margin: 0 3.33% 2% 0;
 
-		.content-thumbs {
-			width: 100%;
+// 		.content-thumbs {
+// 			width: 100%;
 
-			img {
-				width: 100%;
-				height: auto;
-				border: 5px solid $accentLight;
-				transition: border 0.3s;
+// 			img {
+// 				width: 100%;
+// 				height: auto;
+// 				border: 5px solid $accentLight;
+// 				transition: border 0.3s;
 
-				&:hover {
-					border: 5px solid $fontLight;
-				}
-			}
-		}
-	}
+// 				&:hover {
+// 					border: 5px solid $fontLight;
+// 				}
+// 			}
+// 		}
+// 	}
 
-} // End .left
+// } // End .left
 
-.full {
-  width:100%;
-}
+// .full {
+//   width:100%;
+// }
 
 
 /* =============================================================================

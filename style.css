@@ -182,9 +182,6 @@ html[xmlns] .clearfix {
 * html .clearfix {
   height: 1%; }
 
-img {
-  max-width: 100%; }
-
 /* Global Classes / Wordpress Specific */
 .aligncenter {
   text-align: center;
@@ -271,7 +268,7 @@ li {
     width: 80%;
     max-width: 1300px;
     margin: 0 10%;
-    padding: 3% 0;
+    padding: 1.5% 0;
     /* === NAV === */ }
     .header .headerContent .headerImage,
     .header .headerContent .headerText {
@@ -337,70 +334,25 @@ li {
 /* =============================================================================
                    Content Section
    ========================================================================== */
-.left {
-  width: 100%;
-  /* === HOME PAGE IMAGE === */
-  /* === INDIVIDUAL POSTS === */
-  /* === PORTFOLIO === */ }
-  .left img {
-    height: auto;
-    width: auto; }
-  .left p {
-    margin: 3% 0 4% 0; }
-  .left .post {
-    width: 100%;
-    height: 100%; }
-    .left .post .entry-title {
-      margin-bottom: 6%; }
-    .left .post .entry-content {
-      width: 100%;
-      height: 100%;
-      /* CAPTION */
-      /* PAINTING TITLE */ }
-      .left .post .entry-content img {
-        margin-bottom: 3%; }
-      .left .post .entry-content p:nth-child(2) {
-        font-style: italic;
-        text-align: center;
-        color: #a6b2b3;
-        margin-bottom: 6%; }
-      .left .post .entry-content p:nth-child(3) {
-        font-weight: 700;
-        color: #a6cdd2; }
-    .left .post .entry-meta {
-      text-align: right; }
-      .left .post .entry-meta p {
-        margin: 0;
-        color: #a6b2b3;
-        font-style: italic;
-        line-height: 1.2; }
-  .left .navigation {
-    width: 100%;
-    margin-top: 8%; }
-    .left .navigation .nav-previous {
-      float: left; }
-    .left .navigation .nav-next {
-      float: right; }
-  .left h4 {
-    margin-bottom: 5%; }
-  .left .gallery {
-    width: 30%;
-    float: left;
-    margin: 0 3.33% 2% 0; }
-    .left .gallery .content-thumbs {
-      width: 100%; }
-      .left .gallery .content-thumbs img {
-        width: 100%;
-        height: auto;
-        border: 5px solid #dbb8a5;
-        -webkit-transition: border 0.3s;
-                transition: border 0.3s; }
-        .left .gallery .content-thumbs img:hover {
-          border: 5px solid #a6cdd2; }
-
-.full {
+.main {
   width: 100%; }
 
+.portfolioEntry {
+  width: 100%;
+  height: 300px;
+  background: red; }
+  .portfolioEntry .megaThumbContainer {
+    width: 50%;
+    height: 100%;
+    overflow: hidden; }
+    .portfolioEntry .megaThumbContainer .megaThumb {
+      width: 100%;
+      height: auto; }
+
+/* =============================================================================
+                   Content Section (OLD, BEING REBUILT)
+   ========================================================================== */
+/* === PORTFOLIO === */
 /* =============================================================================
                    Footer 
    ========================================================================== */
