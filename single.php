@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <div class="section">
-  <?php get_sidebar(); ?>
   
   <div class="left">
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
