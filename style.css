@@ -206,8 +206,8 @@ img {
    ========================================================================== */
 /* === SASS VARIABLES === */
 body {
-  padding: 3% 3% 3% 3%;
-  background: #393939 url("images/wild_oliva/wild_oliva.png") repeat;
+  padding: 0 3%;
+  background: #393939 url("images/paper_fibers/paper_fibers.png") repeat;
   width: 100%;
   height: 100%; }
 
@@ -222,17 +222,16 @@ body {
    ========================================================================== */
 h1, h2, h3, h4 {
   font-family: 'Rosario', sans-serif;
-  color: #dbb8a5;
+  color: #7a625c;
   font-weight: 400; }
 
 h1 {
-  margin-top: 5%;
-  font-size: 47px;
-  letter-spacing: 2px; }
+  font-size: 40px;
+  line-height: 1; }
 
 h2 {
-  font-size: 28px;
-  letter-spacing: 2px; }
+  font-size: 24px;
+  line-height: 1; }
 
 h3 {
   font-size: 22px;
@@ -245,7 +244,7 @@ h4 {
   letter-spacing: 1.5px; }
 
 a {
-  color: #b39b8e;
+  color: #7a625c;
   text-decoration: none; }
 
 p, li {
@@ -258,74 +257,81 @@ p {
   color: #93aeb1; }
 
 li {
-  font-size: 23px;
+  font-size: 20px;
   text-transform: uppercase;
   line-height: 1;
-  letter-spacing: 0.5px; }
+  letter-spacing: 1px; }
 
 /* =============================================================================
-                   Sidebar and Navigation
+                   Header (Sidebar) and Navigation
    ========================================================================== */
-.sidebar {
-  width: 30%;
-  float: left;
-  position: fixed;
-  text-align: right;
-  padding-top: 3%;
-  padding-right: 5%;
-  border-right: 5px solid #93aeb1;
+.header {
+  width: 100%;
   /* === NAV === */
   /* === SOCIAL ICONS === */ }
-  .sidebar a .site-logo {
-    width: 100%;
-    text-align: right; }
-    .sidebar a .site-logo img {
-      width: 40%;
-      border-radius: 50%;
-      border: 5px solid #93aeb1; }
-  .sidebar a h1, .sidebar a h2 {
-    -webkit-transition: color 0.3s, padding 0.4s, border 0.2s 0.1s;
-            transition: color 0.3s, padding 0.4s, border 0.2s 0.1s; }
-  .sidebar a:hover h1, .sidebar a:hover h2 {
-    color: #a6cdd2; }
-  .sidebar a:hover h1, .sidebar a:hover h2 {
-    padding-right: 5%;
-    border-right: 2px solid #a6cdd2; }
-  .sidebar .menu {
-    margin: 8% 0 8% 0;
-    padding: 0;
-    list-style: none; }
-    .sidebar .menu li a {
-      line-height: 1.5;
-      padding: 1% 0 1% 5%;
-      -webkit-transition: color 0.3s, padding 0.4s, border 0.2s 0.1s;
-              transition: color 0.3s, padding 0.4s, border 0.2s 0.1s; }
-      .sidebar .menu li a:hover {
-        color: #93aeb1;
-        padding-right: 5%;
-        border-right: 2px solid #93aeb1; }
-  .sidebar .social {
+  .header .headerContent {
+    width: 80%;
+    max-width: 1300px;
+    margin: 0 10%;
+    padding: 3% 0;
+    /* === NAV === */ }
+    .header .headerContent .headerImage,
+    .header .headerContent .headerText {
+      display: inline-block;
+      vertical-align: middle; }
+    .header .headerContent .headerImage {
+      width: 15%;
+      margin-right: 1.5%; }
+      .header .headerContent .headerImage .logo {
+        width: 100%;
+        border-radius: 50%;
+        border: 3px solid #93aeb1; }
+    .header .headerContent .headerText {
+      width: 82%; }
+      .header .headerContent .headerText h1 {
+        padding-bottom: 1%;
+        border-bottom: 2px solid #93aeb1; }
+    .header .headerContent .subHead {
+      width: 100%; }
+      .header .headerContent .subHead h2 {
+        float: left;
+        width: 30%;
+        padding-top: 1%; }
+      .header .headerContent .subHead .menu {
+        float: right;
+        width: 70%;
+        list-style-type: none;
+        text-align: right;
+        margin: 0;
+        padding: 0; }
+        .header .headerContent .subHead .menu li {
+          display: inline-block;
+          padding: 1% 0;
+          margin: 0 3%; }
+          .header .headerContent .subHead .menu li:last-child {
+            margin-right: 0; }
+  .header .social {
     padding: 0;
     margin-top: 0;
     margin-bottom: 10%;
     list-style: none; }
-    .sidebar .social li {
+    .header .social li {
       display: inline;
       width: 20%; }
-    .sidebar .social .socialIcon a {
+    .header .social .socialIcon a {
       -webkit-transition: all 0.2s;
               transition: all 0.2s; }
-      .sidebar .social .socialIcon a:hover {
+      .header .social .socialIcon a:hover {
         border-bottom: 2px solid #93aeb1; }
-        .sidebar .social .socialIcon a:hover svg {
+        .header .social .socialIcon a:hover svg {
           fill: #93aeb1; }
-    .sidebar .social .socialIcon svg {
+    .header .social .socialIcon svg {
       height: 24px;
       margin: 1.5%;
       fill: #b39b8e;
       -webkit-transition: all 0.3s;
               transition: all 0.3s; }
-    .sidebar .social .email svg {
+    .header .social .email svg {
       height: 19px; }
 
 /* =============================================================================

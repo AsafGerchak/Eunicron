@@ -27,5 +27,38 @@
 	<script src="<?php bloginfo('stylesheet_directory');?>/js/scripts.js"></script>
 </head>
 
-
 <body <?php body_class(); ?>>
+
+  <div class="header">    
+    <div class="headerContent">
+
+      <!-- ====== SITE LOGO ====== -->
+
+      <a href="<?php echo home_url( '/' ); ?>" class="headerImage" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+
+          <img src='<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>' class="logo" alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
+
+      </a>
+
+      <div class="headerText">
+        
+        <a href="<?php echo home_url( '/' ); ?>" class="logo" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+          <h1><?php bloginfo( 'name' ); ?></h1>
+        </a>
+
+        <div class="subHead clearfix">
+          
+          <a href="<?php echo home_url( '/' ); ?>" class="logo" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+            <h2><?php bloginfo( 'description' ) ?></h2>
+          </a>
+
+          <!-- ====== Nav menu ====== -->
+          <?php wp_nav_menu( array( 'container' => false, 'menu' => 'header' ) ); ?>
+
+        </div> <!-- /.subHead -->
+
+      </div> <!-- /. headerText -->
+  
+    </div> <!-- /.headerContent -->
+  </div> <!-- /.header -->
+
