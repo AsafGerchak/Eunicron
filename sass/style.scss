@@ -34,23 +34,13 @@ img {
                    General Styles
    ========================================================================== */
 
-// TITLE:
-// font-family: 'Rosario', sans-serif;
-// BODY:
-// font-family: 'Overlock', cursive;
 
 /* === SASS VARIABLES === */
 
 $body: #393939;
-// $accentLight: #b39b8e;
-// $accentLight: #cfbdb3;
-// $accentLight: #dbc5b9;
 $accentLight: #dbb8a5;
 $accentMed: #b39b8e;
 $accentDark: #7a625c;
-// $font: #338899;
-// $font: #66aebd;
-// $font: #a8b7b9;
 $font: #93aeb1;
 $fontLight: #a6cdd2;
 $fontDark: #a6b2b3;
@@ -59,12 +49,7 @@ $fontDark: #a6b2b3;
 body {
   // color:#333;
   padding: 3% 3% 3% 3%;
-  // background: url('images/tweed/tweed.png') repeat;
-  // background: url('images/hoffman/hoffman.png') repeat;
-  // background: url('images/squared_metal/squared_metal.png') repeat;
-  // background: url('images/black_lozenge/black_lozenge.png') repeat;
   background: $body url('images/wild_oliva/wild_oliva.png') repeat;
-  // background-attachment: fixed;
   width: 100%;
   height: 100%;
 }
@@ -85,9 +70,6 @@ h1, h2, h3, h4 {
 	font-family: 'Rosario', sans-serif;
 	color: $accentLight;
 	font-weight: 400;
-	// color: $accentDark;
-	// text-shadow: 0 0 0.20px #fff;
-	// transition: all 1s linear;
 }
 
 h1 {
@@ -114,8 +96,6 @@ h4 {
 }
 
 a {
-  // color: $accentLight;
-  // color: $accentDark;
   color: $accentMed;
   text-decoration: none;
 }
@@ -136,7 +116,6 @@ li {
 	text-transform: uppercase;
 	line-height: 1;
 	letter-spacing: 0.5px;
-	// padding: 2% 0;
 }
 
 /* =============================================================================
@@ -161,9 +140,7 @@ li {
 	  	img{
 	  		width: 40%;
 	  		border-radius: 50%;
-	  		// border: 5px solid $accentMed;
 	  		border: 5px solid $font;
-	  		// transition: margin 0.4s, border 0.2s 0.1s;
 
 	  	} // End img
 	  } // End .site-logo
@@ -173,11 +150,6 @@ li {
 	  }
 
 	  &:hover {
-
-	  	img {
-	  		// margin-right: 5%;
-	  		// border: 5px solid $font;
-	  	}
 
 	  	h1, h2 {
 	  		color: $fontLight;
@@ -196,12 +168,10 @@ li {
 		margin: 8% 0 8% 0;
 		padding:0;
 		list-style: none;
-		// background-color: red;
 
 		li a {
 			line-height: 1.5;
 	  	padding: 1% 0 1% 5%;
-	  	// margin: 1% 0;
 	  	transition: color 0.3s, padding 0.4s, border 0.2s 0.1s;
 
 	  	&:hover {
@@ -215,17 +185,14 @@ li {
 
 	/* === SOCIAL ICONS === */
 	.social {
-		// display: inline;
 		padding: 0;
 		margin-top: 0;
 		margin-bottom: 10%;
 		list-style: none;
 
 		li {
-			// list-style: none;
 			display: inline;
 			width: 20%;
-			// height: 24px;
 		}
 
 		.socialIcon a {
@@ -241,16 +208,10 @@ li {
 		}
 
 		.socialIcon svg {
-			// display: inline-block;
 			height: 24px;
 			margin: 1.5%;
 			fill: $accentMed;
 			transition: all 0.3s;
-
-			&:hover {
-				// fill: $font;
-				// border-bottom: 2px solid $font;
-			}
 		} // End /.socialIcon svg
 
 		.email svg {
@@ -280,13 +241,9 @@ li {
 			float: right;
 			height: auto;
 			width: auto;
-			// height: auto;
-			// width: 70%;
-			// margin-right: 10%;
 		}
 
 		p {
-			// margin-bottom: 5%;
 			margin: 3% 0 4% 0;
 		}
 
