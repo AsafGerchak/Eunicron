@@ -1,4 +1,48 @@
 @media (max-width: 1000px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 17px;
+  }
+
+  li {
+    font-size: 17px;
+  }
+
+  .portfolioItem .megaThumbOverlay {
+    display: none;
+  }
+
+  .portfolioItem:nth-child(2n-1) .captionContainer,
+  .portfolioItem:nth-child(2n) .captionContainer {
+    background: #fbfbfb;
+  }
+
+  .portfolioItem:nth-child(2n-1) .captionContainer:before {
+    border-right-color: #fbfbfb;
+  }
+
+  .portfolioItem:nth-child(2n) .captionContainer:before {
+    border-left-color: #fbfbfb;
+  }
+
+  .portfolioItem .captionContainer .shortCaption h4 {
+    margin-top: 4%;
+    opacity: 1;
+  }
+
+
+
   #wpadminbar { border-left:10px solid red !important; }
   body{
     /*padding: 0 3%;*/
@@ -19,15 +63,30 @@
 
 }
 
-@media (max-width: 768px) {
-  #wpadminbar { border-left:10px solid green !important; }
-
-  .left, .sidebar {
-    width:100%;
-    clear:both;
+@media (max-width: 830px) {
+  h1 {
+    font-size: 31px;
   }
 
-}
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  li {
+    font-size: 16px;
+  }
+
+  .header .headerContent .subHead .menu li {
+    margin: 0 1%;
+  }
 
 @media (max-width: 480px) {
   #wpadminbar { border-left:10px solid yellow !important; }

@@ -371,11 +371,11 @@ li {
     width: 35%;
     height: 100%;
     background: #ddd;
-    padding: 5% 3% 0 7%;
+    padding: 4% 3% 0 7%;
     text-align: right;
     position: relative;
-    -webkit-transition: width 0.85s, background 0.85s, padding-left 0.85s, padding-top 0.85s;
-            transition: width 0.85s, background 0.85s, padding-left 0.85s, padding-top 0.85s; }
+    -webkit-transition: all 0.85s;
+            transition: all 0.85s; }
     .portfolioItem:nth-child(2n-1) .captionContainer:before {
       right: 100%;
       top: 50%;
@@ -387,7 +387,9 @@ li {
       border-width: 26px;
       margin-top: -26px;
       position: absolute;
-      pointer-events: none; }
+      pointer-events: none;
+      -webkit-transition: all 0.85s;
+              transition: all 0.85s; }
   .portfolioItem:nth-child(2n) .megaThumbContainer {
     float: right;
     width: 65%;
@@ -408,10 +410,10 @@ li {
     width: 35%;
     height: 100%;
     background: #ddd;
-    padding: 5% 7% 0 3%;
+    padding: 4% 7% 0 3%;
     position: relative;
-    -webkit-transition: width 0.85s, background 0.85s, padding-left 0.85s, padding-top 0.85s;
-            transition: width 0.85s, background 0.85s, padding-left 0.85s, padding-top 0.85s; }
+    -webkit-transition: all 0.85s;
+            transition: all 0.85s; }
     .portfolioItem:nth-child(2n) .captionContainer:before {
       left: 100%;
       top: 50%;
@@ -423,7 +425,9 @@ li {
       border-width: 26px;
       margin-top: -26px;
       position: absolute;
-      pointer-events: none; }
+      pointer-events: none;
+      -webkit-transition: all 0.85s;
+              transition: all 0.85s; }
   .portfolioItem .megaThumbOverlay {
     position: absolute;
     top: 0;
@@ -441,22 +445,25 @@ li {
   .portfolioItem:nth-child(2n-1):hover .megaThumbContainer .megaThumb {
     left: -15%; }
   .portfolioItem:nth-child(2n-1):hover .captionContainer {
-    padding-left: 1%; }
+    padding-left: 3%; }
+    .portfolioItem:nth-child(2n-1):hover .captionContainer:before {
+      border-right-color: #fbfbfb; }
   .portfolioItem:nth-child(2n):hover .megaThumbContainer .megaThumb {
     left: -9%; }
   .portfolioItem:nth-child(2n):hover .captionContainer {
-    padding-right: 1%; }
+    padding-right: 3%; }
+    .portfolioItem:nth-child(2n):hover .captionContainer:before {
+      border-left-color: #fbfbfb; }
   .portfolioItem:nth-child(2n-1):hover .megaThumbContainer, .portfolioItem:nth-child(2n):hover .megaThumbContainer {
-    width: 70%; }
+    width: 68%; }
     .portfolioItem:nth-child(2n-1):hover .megaThumbContainer .megaThumb, .portfolioItem:nth-child(2n):hover .megaThumbContainer .megaThumb {
       width: 125%;
       top: -140%; }
   .portfolioItem:nth-child(2n-1):hover .megaThumbOverlay, .portfolioItem:nth-child(2n):hover .megaThumbOverlay {
     background: none; }
   .portfolioItem:nth-child(2n-1):hover .captionContainer, .portfolioItem:nth-child(2n):hover .captionContainer {
-    width: 30%;
-    background: #eee;
-    padding-top: 3%; }
+    width: 32%;
+    background: #fbfbfb; }
     .portfolioItem:nth-child(2n-1):hover .captionContainer .shortCaption h4, .portfolioItem:nth-child(2n):hover .captionContainer .shortCaption h4 {
       margin-top: 4%;
       opacity: 1; }
