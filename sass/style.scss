@@ -246,68 +246,109 @@ li {
 	width: 100%;
 }
 
+
+/* === Using nth-child selectors to alternate left to right! ===*/
+
 .portfolioItem {
 	width: 100%;
 	height: 200px;
 	border-top: 1px solid #bbb;
 
-	.megaThumbContainer,
-	.captionContainer {
-		// display: inline-block;
-		float: left;
-	}
+	&:nth-child(2n-1) {
 
-	.megaThumbContainer {
-		width: 50%;
-		height: 100%;
-		overflow: hidden;
+		.megaThumbContainer,
+		.captionContainer {
+			// display: inline-block;
+			float: left;
+		}
 
-		.megaThumb {
-			width: 130%;
-			height: auto;
+		.megaThumbContainer {
+			width: 65%;
+			height: 100%;
+			overflow: hidden;
+
+			.megaThumb {
+				width: 130%;
+				height: auto;
+				position: relative;
+				top: -105%;
+				left: -15%;
+			}
+		} // End .megaThumb
+
+		.captionContainer {
+			width: 35%;
+			height: 100%;
+			background: #ddd;
 			position: relative;
-			top: -85%;
-			left: -15%;
-		}
-	} // End .megaThumb
+			// left: 60%;
+			// border: 2px solid #aaa;
 
-	.captionContainer {
-		width: 50%;
-		height: 100%;
-		background: #ddd;
-		position: relative;
-		// left: 60%;
-		// border: 2px solid #aaa;
+			// &:after,
+			&:before {
+				right: 100%;
+				top: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				border-right-color: #ddd;
+				border-width: 26px;
+				margin-top: -26px;
+				position: absolute;
+				pointer-events: none;
+			}
+		} // End .captionContainer
+	} // End .portfolioItem:nth-Child(2n-1)
 
-		// &:after,
-		&:before {
-			right: 100%;
-			top: 50%;
-			border: solid transparent;
-			content: " ";
-			height: 0;
-			width: 0;
-			border-right-color: #ddd;
-			border-width: 26px;
-			margin-top: -26px;
-			position: absolute;
-			pointer-events: none;
-		}
+	&:nth-child(2n) {
 
-		// &:after {
-		// 	// border-color: rgba(136, 183, 213, 0);
-		// 	border-right-color: orange;
-		// 	border-width: 20px;
-		// 	margin-top: -20px;
+		// .megaThumbContainer,
+		// .captionContainer {
+		// 	// display: inline-block;
+		// 	float: left;
 		// }
-		// &:before {
-			// border-color: rgba(194, 225, 245, 0);
-			// border-right-color: orange;
-			// border-width: 26px;
-			// margin-top: -26px;
-			// width: 60px;
-		// }
-	} // end .captionContainer
+
+		.megaThumbContainer {
+			float: right;
+			width: 65%;
+			height: 100%;
+			overflow: hidden;
+
+			.megaThumb {
+				width: 130%;
+				height: auto;
+				position: relative;
+				top: -105%;
+				left: -15%;
+			}
+		} // End .megaThumb
+
+		.captionContainer {
+			float: left;
+			width: 35%;
+			height: 100%;
+			background: #ddd;
+			position: relative;
+			// left: 60%;
+			// border: 2px solid #aaa;
+
+			// &:after,
+			&:before {
+				left: 100%;
+				top: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				border-left-color: #ddd;
+				border-width: 26px;
+				margin-top: -26px;
+				position: absolute;
+				pointer-events: none;
+			}
+		} // End .captionContainer
+	} // End .portfolioItem:nth-Child(2n-1)
 } // End .portfolioItem
 
 // .arrow_box {

@@ -24,12 +24,16 @@
 
 					<div class="megaThumbContainer">
 						<?php $image = get_field('photo'); ?>
-						<img src="<?php echo $image['sizes']['special'] ?>" class="megaThumb">
+						<a href="<?php echo get_post_permalink(); ?>">
+							<img src="<?php echo $image['sizes']['special'] ?>" class="megaThumb">
+						</a>
 						<!-- <pre><?php print_r($image); ?></pre> -->
 					</div> <!-- /.megaThumb -->
 
 					<div class="captionContainer">
+						<a href="<?php echo get_post_permalink(); ?>">
 						
+						</a>
 					</div>
 					
 				</div> <!-- /.portfolioItem -->

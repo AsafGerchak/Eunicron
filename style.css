@@ -337,29 +337,30 @@ li {
 .main {
   width: 100%; }
 
+/* === Using nth-child selectors to alternate left to right! ===*/
 .portfolioItem {
   width: 100%;
   height: 200px;
   border-top: 1px solid #bbb; }
-  .portfolioItem .megaThumbContainer,
-  .portfolioItem .captionContainer {
+  .portfolioItem:nth-child(2n-1) .megaThumbContainer,
+  .portfolioItem:nth-child(2n-1) .captionContainer {
     float: left; }
-  .portfolioItem .megaThumbContainer {
-    width: 50%;
+  .portfolioItem:nth-child(2n-1) .megaThumbContainer {
+    width: 65%;
     height: 100%;
     overflow: hidden; }
-    .portfolioItem .megaThumbContainer .megaThumb {
+    .portfolioItem:nth-child(2n-1) .megaThumbContainer .megaThumb {
       width: 130%;
       height: auto;
       position: relative;
-      top: -85%;
+      top: -105%;
       left: -15%; }
-  .portfolioItem .captionContainer {
-    width: 50%;
+  .portfolioItem:nth-child(2n-1) .captionContainer {
+    width: 35%;
     height: 100%;
     background: #ddd;
     position: relative; }
-    .portfolioItem .captionContainer:before {
+    .portfolioItem:nth-child(2n-1) .captionContainer:before {
       right: 100%;
       top: 50%;
       border: solid transparent;
@@ -367,6 +368,35 @@ li {
       height: 0;
       width: 0;
       border-right-color: #ddd;
+      border-width: 26px;
+      margin-top: -26px;
+      position: absolute;
+      pointer-events: none; }
+  .portfolioItem:nth-child(2n) .megaThumbContainer {
+    float: right;
+    width: 65%;
+    height: 100%;
+    overflow: hidden; }
+    .portfolioItem:nth-child(2n) .megaThumbContainer .megaThumb {
+      width: 130%;
+      height: auto;
+      position: relative;
+      top: -105%;
+      left: -15%; }
+  .portfolioItem:nth-child(2n) .captionContainer {
+    float: left;
+    width: 35%;
+    height: 100%;
+    background: #ddd;
+    position: relative; }
+    .portfolioItem:nth-child(2n) .captionContainer:before {
+      left: 100%;
+      top: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      border-left-color: #ddd;
       border-width: 26px;
       margin-top: -26px;
       position: absolute;
