@@ -88,6 +88,107 @@
     margin: 0 1%;
   }
 
-@media (max-width: 480px) {
-  #wpadminbar { border-left:10px solid yellow !important; }
+
+@media (max-width: 670px) {
+  h1 {
+    font-size: 27px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  li {
+    font-size: 14px;
+  }
+
+  .header .headerContent .subHead .menu li {
+    padding: 2% 0;
+  }
+
+  .portfolioItem:nth-child(2n-1):hover .megaThumbContainer,
+  .portfolioItem:nth-child(2n):hover .megaThumbContainer {
+    width: 65%;
+  }
+
+  .portfolioItem:nth-child(2n-1):hover .captionContainer,
+  .portfolioItem:nth-child(2n):hover .captionContainer {
+    width: 35%;
+  }
+
+  .portfolioItem:nth-child(2n-1) .megaThumbContainer .megaThumb,
+  .portfolioItem:nth-child(2n) .megaThumbContainer .megaThumb {
+    top: -90%;
+  }
+
+  .portfolioItem:nth-child(2n-1):hover .megaThumbContainer .megaThumb,
+  .portfolioItem:nth-child(2n):hover .megaThumbContainer .megaThumb {
+    top: -90%;
+    width: 130%;
+  }
+
+  .portfolioItem:nth-child(2n-1):hover .megaThumbContainer .megaThumb {
+    left: -12%;
+  }
+
+  .portfolioItem:nth-child(2n):hover .megaThumbContainer .megaThumb {
+    left: -12%;
+  }
+
+  .portfolioItem:nth-child(2n):hover .captionContainer {
+    padding-right: 7%;
+  }
+
+  .portfolioItem:nth-child(2n-1):hover .captionContainer {
+    padding-left: 7%;
+  }
+}
+
+
+@media (max-width: 500px) {
+  li {
+    font-size: 12px;
+  }
+
+  .header .headerContent .headerImage {
+    width: 24%;
+  }
+
+  .header .headerContent .headerText {
+    width: 72%;
+  }
+
+  .header .headerContent .subHead h2 {
+    float: none;
+    width: 100%;
+    text-align: right;
+  }
+
+  .header .headerContent .subHead .menu {
+    width: 100%;
+    margin-top: 2%;
+  }
+
+  .portfolioItem:nth-child(2n-1) .megaThumbContainer .megaThumb,
+  .portfolioItem:nth-child(2n) .megaThumbContainer .megaThumb {
+    top: -45%;
+  }
+
+  .portfolioItem:hover:nth-child(2n-1) .megaThumbContainer .megaThumb,
+  .portfolioItem:hover:nth-child(2n) .megaThumbContainer .megaThumb {
+    top: -45%;
+  }
+
+  .portfolioItem:nth-child(2n-1) .captionContainer:before,
+  .portfolioItem:nth-child(2n) .captionContainer:before {
+    display: none;
+  }
+
+  .portfolioItem:nth-child(2n-1):hover .captionContainer {
+    padding-left: 2%;
+  }
+
+  .portfolioItem:nth-child(2n):hover .captionContainer {
+    padding-right: 2%;
+  }
 }
