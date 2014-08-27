@@ -20,20 +20,21 @@
 
 				<!-- THIS IS INSIDE THE LOOP -->
 
-				<div class="portfolioEntry">
+				<div class="portfolioItem">
 
 					<div class="megaThumbContainer">
 						<?php $image = get_field('photo'); ?>
 						<img src="<?php echo $image['sizes']['special'] ?>" class="megaThumb">
 						<!-- <pre><?php print_r($image); ?></pre> -->
 					</div> <!-- /.megaThumb -->
+
+					<div class="captionContainer">
+						
+					</div>
 					
-				</div> <!-- /.portfolioEntry -->
+				</div> <!-- /.portfolioItem -->
 				
-				<?php the_title(); ?>
-				<h2>boop</h2>
-				<?php the_field('materials'); ?>
-				<h1>beep</h1>
+
 
 				<!-- END OF INSIDE THE LOOP -->
 
