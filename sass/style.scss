@@ -40,7 +40,8 @@ Author URI: http://CoderOfNote.com
 $body: #393939;
 $accentLight: #dbb8a5;
 $accentMed: #b39b8e;
-$accentDark: #7a625c;
+// $accentDark: #7a625c;
+$accentDark: #5c4a45;
 $font: #93aeb1;
 $fontLight: #a6cdd2;
 $fontDark: #a6b2b3;
@@ -69,10 +70,19 @@ body {
                    Typography
    ========================================================================== */
 
-h1, h2, h3, h4 {
+h1, h2 {
 	font-family: 'Rosario', sans-serif;
 	color: $accentDark;
 	font-weight: 400;
+}
+
+h3, h4, p, li {
+	font-family: 'Merriweather Sans', sans-serif;
+	color: $accentDark;
+}
+
+p, li {
+	font-weight: 300;
 }
 
 h1 {
@@ -89,25 +99,24 @@ h2 {
 }
 
 h3 {
-	font-size: 22px;
-	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 400;
+	// font-style: italic;
+	// text-transform: uppercase;
 	letter-spacing: 1px;
 }
 
 h4 {
-	font-size: 26px;
-	text-transform: uppercase;
-	letter-spacing: 1.5px;
+	font-size: 18px;
+	font-weight: 300;
+	// text-transform: uppercase;
+	font-style: italic;
+	// letter-spacing: 1.5px;
 }
 
 a {
   color: $accentDark;
   text-decoration: none;
-}
-
-p, li {
-	font-family: 'Overlock', cursive;
-	font-weight: 400;
 }
 
 p {
@@ -187,7 +196,7 @@ li {
 
 				li {
 					display: inline-block;
-					padding: 1% 0;
+					padding: 1.55% 0;
 					margin: 0 3%;
 
 					&:last-child {
@@ -253,6 +262,10 @@ li {
 	width: 100%;
 	height: 200px;
 	border-top: 1px solid #bbb;
+	position: relative;
+
+
+/* == ODD-NUMBERED PIECES == */
 
 	&:nth-child(2n-1) {
 
@@ -266,13 +279,15 @@ li {
 			width: 65%;
 			height: 100%;
 			overflow: hidden;
+			transition: all 0.85s;
 
 			.megaThumb {
 				width: 130%;
 				height: auto;
 				position: relative;
 				top: -105%;
-				left: -15%;
+				left: -12%;
+				transition: all 0.85s;
 			}
 		} // End .megaThumb
 
@@ -280,9 +295,12 @@ li {
 			width: 35%;
 			height: 100%;
 			background: #ddd;
+			padding: 5% 3% 0 7%;
+			text-align: right;
 			position: relative;
 			// left: 60%;
 			// border: 2px solid #aaa;
+			transition: width 0.85s, background 0.85s, padding-left 0.85s, padding-top 0.85s;
 
 			// &:after,
 			&:before {
@@ -301,26 +319,29 @@ li {
 		} // End .captionContainer
 	} // End .portfolioItem:nth-Child(2n-1)
 
+
+/* == EVEN-NUMBERED PIECES == */
+
 	&:nth-child(2n) {
 
-		// .megaThumbContainer,
-		// .captionContainer {
-		// 	// display: inline-block;
-		// 	float: left;
-		// }
+		.megaThumbContainer,
+		.captionContainer {
+		}
 
 		.megaThumbContainer {
 			float: right;
 			width: 65%;
 			height: 100%;
 			overflow: hidden;
+			transition: all 0.85s;
 
 			.megaThumb {
 				width: 130%;
 				height: auto;
 				position: relative;
 				top: -105%;
-				left: -15%;
+				left: -12%;
+				transition: all 0.85s;
 			}
 		} // End .megaThumb
 
@@ -329,11 +350,11 @@ li {
 			width: 35%;
 			height: 100%;
 			background: #ddd;
+			padding: 5% 7% 0 3%;
+			// text-align: right;
 			position: relative;
-			// left: 60%;
-			// border: 2px solid #aaa;
+			transition: width 0.85s, background 0.85s, padding-left 0.85s, padding-top 0.85s;
 
-			// &:after,
 			&:before {
 				left: 100%;
 				top: 50%;
@@ -349,36 +370,88 @@ li {
 			}
 		} // End .captionContainer
 	} // End .portfolioItem:nth-Child(2n-1)
+
+
+/*== GENERAL STYLES ==*/
+
+	.megaThumbOverlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(83, 83, 83, 0.3);
+		transition: all 0.7s;
+	}
+
+	.captionContainer .shortCaption {
+		// max-width: 70%;
+		
+		h4 {
+			margin-top: 8%;
+			opacity: 0;
+			transition: all 0.85s;
+		}
+	} // End .shortCaption
+
+
+/*===== HOVER STATES FOR PORTFOLIO PAGE =====*/
+	
+	&:nth-child(2n-1):hover {
+
+		.megaThumbContainer .megaThumb {
+			left: -15%;
+		}
+
+		.captionContainer {
+			padding-left: 1%;
+		}
+	} // End &:nth-child(2n-1):hover
+
+	&:nth-child(2n):hover {
+
+		.megaThumbContainer .megaThumb {
+			left: -9%;
+		}
+
+		.captionContainer {
+			padding-right: 1%;
+		}
+	} // End &:nth-child(2n):hover
+
+	&:nth-child(2n-1),
+	&:nth-child(2n) {
+		
+		&:hover {
+
+			.megaThumbContainer {
+				width: 70%;
+
+				.megaThumb {
+					width: 125%;
+					top: -140%;
+				}
+			}
+
+			.megaThumbOverlay {
+				background: none;
+			}
+
+			.captionContainer {
+				width: 30%;
+				background: #eee;
+				padding-top: 3%;
+
+				.shortCaption h4 {
+					margin-top: 4%;
+					opacity: 1;
+				}
+			}
+		} // End :nth-child(both):hovers
+	} // End :nth-child(both)
 } // End .portfolioItem
 
-// .arrow_box {
-// 	position: relative;
-// 	background: #88b7d5;
-// 	border: 4px solid #c2e1f5;
-// }
-// .arrow_box:after, .arrow_box:before {
-// 	right: 100%;
-// 	top: 50%;
-// 	border: solid transparent;
-// 	content: " ";
-// 	height: 0;
-// 	width: 0;
-// 	position: absolute;
-// 	pointer-events: none;
-// }
 
-// .arrow_box:after {
-// 	border-color: rgba(136, 183, 213, 0);
-// 	border-right-color: #88b7d5;
-// 	border-width: 30px;
-// 	margin-top: -30px;
-// }
-// .arrow_box:before {
-// 	border-color: rgba(194, 225, 245, 0);
-// 	border-right-color: #c2e1f5;
-// 	border-width: 36px;
-// 	margin-top: -36px;
-// }
 
 
 /* =============================================================================

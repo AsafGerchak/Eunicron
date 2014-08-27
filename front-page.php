@@ -23,18 +23,28 @@
 				<div class="portfolioItem">
 
 					<div class="megaThumbContainer">
+						
 						<?php $image = get_field('photo'); ?>
 						<a href="<?php echo get_post_permalink(); ?>">
 							<img src="<?php echo $image['sizes']['special'] ?>" class="megaThumb">
+
+							<div class="megaThumbOverlay">
+								<!-- This div exists entirely to give a slightly shadowed overlay to the megaThumbs, and disappears on hover-->
+							</div>
 						</a>
-						<!-- <pre><?php print_r($image); ?></pre> -->
+
 					</div> <!-- /.megaThumb -->
 
 					<div class="captionContainer">
 						<a href="<?php echo get_post_permalink(); ?>">
+
+							<div class="shortCaption">
+								<h3><?php the_title(); ?></h3>
+								<h4><?php the_field('type'); ?>, <?php the_field('year'); ?></h4>
+							</div> <!-- /.shortCaption -->
 						
 						</a>
-					</div>
+					</div> <!-- /.captionContainer -->
 					
 				</div> <!-- /.portfolioItem -->
 				

@@ -216,10 +216,17 @@ body {
 /* =============================================================================
                    Typography
    ========================================================================== */
-h1, h2, h3, h4 {
+h1, h2 {
   font-family: 'Rosario', sans-serif;
-  color: #7a625c;
+  color: #5c4a45;
   font-weight: 400; }
+
+h3, h4, p, li {
+  font-family: 'Merriweather Sans', sans-serif;
+  color: #5c4a45; }
+
+p, li {
+  font-weight: 300; }
 
 h1 {
   font-size: 40px;
@@ -230,22 +237,18 @@ h2 {
   line-height: 1; }
 
 h3 {
-  font-size: 22px;
-  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
   letter-spacing: 1px; }
 
 h4 {
-  font-size: 26px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px; }
+  font-size: 18px;
+  font-weight: 300;
+  font-style: italic; }
 
 a {
-  color: #7a625c;
+  color: #5c4a45;
   text-decoration: none; }
-
-p, li {
-  font-family: 'Overlock', cursive;
-  font-weight: 400; }
 
 p {
   font-size: 20px;
@@ -303,7 +306,7 @@ li {
         padding: 0; }
         .header .headerContent .subHead .menu li {
           display: inline-block;
-          padding: 1% 0;
+          padding: 1.55% 0;
           margin: 0 3%; }
           .header .headerContent .subHead .menu li:last-child {
             margin-right: 0; }
@@ -341,25 +344,38 @@ li {
 .portfolioItem {
   width: 100%;
   height: 200px;
-  border-top: 1px solid #bbb; }
+  border-top: 1px solid #bbb;
+  position: relative;
+  /* == ODD-NUMBERED PIECES == */
+  /* == EVEN-NUMBERED PIECES == */
+  /*== GENERAL STYLES ==*/
+  /*===== HOVER STATES FOR PORTFOLIO PAGE =====*/ }
   .portfolioItem:nth-child(2n-1) .megaThumbContainer,
   .portfolioItem:nth-child(2n-1) .captionContainer {
     float: left; }
   .portfolioItem:nth-child(2n-1) .megaThumbContainer {
     width: 65%;
     height: 100%;
-    overflow: hidden; }
+    overflow: hidden;
+    -webkit-transition: all 0.85s;
+            transition: all 0.85s; }
     .portfolioItem:nth-child(2n-1) .megaThumbContainer .megaThumb {
       width: 130%;
       height: auto;
       position: relative;
       top: -105%;
-      left: -15%; }
+      left: -12%;
+      -webkit-transition: all 0.85s;
+              transition: all 0.85s; }
   .portfolioItem:nth-child(2n-1) .captionContainer {
     width: 35%;
     height: 100%;
     background: #ddd;
-    position: relative; }
+    padding: 5% 3% 0 7%;
+    text-align: right;
+    position: relative;
+    -webkit-transition: width 0.85s, background 0.85s, padding-left 0.85s, padding-top 0.85s;
+            transition: width 0.85s, background 0.85s, padding-left 0.85s, padding-top 0.85s; }
     .portfolioItem:nth-child(2n-1) .captionContainer:before {
       right: 100%;
       top: 50%;
@@ -376,19 +392,26 @@ li {
     float: right;
     width: 65%;
     height: 100%;
-    overflow: hidden; }
+    overflow: hidden;
+    -webkit-transition: all 0.85s;
+            transition: all 0.85s; }
     .portfolioItem:nth-child(2n) .megaThumbContainer .megaThumb {
       width: 130%;
       height: auto;
       position: relative;
       top: -105%;
-      left: -15%; }
+      left: -12%;
+      -webkit-transition: all 0.85s;
+              transition: all 0.85s; }
   .portfolioItem:nth-child(2n) .captionContainer {
     float: left;
     width: 35%;
     height: 100%;
     background: #ddd;
-    position: relative; }
+    padding: 5% 7% 0 3%;
+    position: relative;
+    -webkit-transition: width 0.85s, background 0.85s, padding-left 0.85s, padding-top 0.85s;
+            transition: width 0.85s, background 0.85s, padding-left 0.85s, padding-top 0.85s; }
     .portfolioItem:nth-child(2n) .captionContainer:before {
       left: 100%;
       top: 50%;
@@ -401,6 +424,42 @@ li {
       margin-top: -26px;
       position: absolute;
       pointer-events: none; }
+  .portfolioItem .megaThumbOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(83, 83, 83, 0.3);
+    -webkit-transition: all 0.7s;
+            transition: all 0.7s; }
+  .portfolioItem .captionContainer .shortCaption h4 {
+    margin-top: 8%;
+    opacity: 0;
+    -webkit-transition: all 0.85s;
+            transition: all 0.85s; }
+  .portfolioItem:nth-child(2n-1):hover .megaThumbContainer .megaThumb {
+    left: -15%; }
+  .portfolioItem:nth-child(2n-1):hover .captionContainer {
+    padding-left: 1%; }
+  .portfolioItem:nth-child(2n):hover .megaThumbContainer .megaThumb {
+    left: -9%; }
+  .portfolioItem:nth-child(2n):hover .captionContainer {
+    padding-right: 1%; }
+  .portfolioItem:nth-child(2n-1):hover .megaThumbContainer, .portfolioItem:nth-child(2n):hover .megaThumbContainer {
+    width: 70%; }
+    .portfolioItem:nth-child(2n-1):hover .megaThumbContainer .megaThumb, .portfolioItem:nth-child(2n):hover .megaThumbContainer .megaThumb {
+      width: 125%;
+      top: -140%; }
+  .portfolioItem:nth-child(2n-1):hover .megaThumbOverlay, .portfolioItem:nth-child(2n):hover .megaThumbOverlay {
+    background: none; }
+  .portfolioItem:nth-child(2n-1):hover .captionContainer, .portfolioItem:nth-child(2n):hover .captionContainer {
+    width: 30%;
+    background: #eee;
+    padding-top: 3%; }
+    .portfolioItem:nth-child(2n-1):hover .captionContainer .shortCaption h4, .portfolioItem:nth-child(2n):hover .captionContainer .shortCaption h4 {
+      margin-top: 4%;
+      opacity: 1; }
 
 /* =============================================================================
                    Content Section (OLD, BEING REBUILT)

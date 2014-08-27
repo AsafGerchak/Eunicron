@@ -15,7 +15,8 @@
   <link rel="stylesheet" type="text/css"  href="<?php bloginfo( 'stylesheet_url' ); ?>" />
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory');?>/mq.css">
   <link href='http://fonts.googleapis.com/css?family=Rosario' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Overlock:400,400italic,700' rel='stylesheet' type='text/css'>
+  <!-- <link href='http://fonts.googleapis.com/css?family=Overlock:400,400italic,700' rel='stylesheet' type='text/css'> -->
+  <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,400italic,300italic' rel='stylesheet' type='text/css'>
   
 	<?php	if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); wp_head(); ?>
 
